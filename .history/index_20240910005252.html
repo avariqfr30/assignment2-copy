@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bootstrap E-Commerce Template</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Fontawesome core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Slide Show Css -->
+    <link href="assets/ItemSlider/css/main-style.css" rel="stylesheet" />
+    <!-- custom CSS here -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Google Pay API -->
+    <script src="https://pay.google.com/gp/p/js/pay.js" async></script>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><strong>ALICE'S</strong> ELECTRONIC BIKE Shop</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Signup</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><strong>Call: </strong>+61-000-000-000</a></li>
+                            <li><a href="#"><strong>Mail: </strong>info@alicebikeshop.com</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><strong>Address: </strong>
+                                <div>
+                                    Melbourne,<br />
+                                    VIC 3000, AUSTRALIA
+                                </div>
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
+                    </div>
+                      
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="active">Computers</li>
+                    </ol>
+                </div>
+                <div class="row">
+                    <div class="btn-group alg-right-pad">
+                        <button type="button" class="btn btn-default"><strong>1235  </strong>items</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                Sort Products  
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">By Price Low</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Price High</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Popularity</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Reviews</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="assets/img/bronton.jpg" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">Bronton </a></h3>
+                                <p>Price : <strong>$3000</strong></p>
+                                <p><a href="#" class="btn btn-success" role="button" onclick="addToCart(3000)">Add To Cart</a><a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="assets/img/dummyimg.jpg" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">E-BMX </a></h3>
+                                <p>Price : <strong>$2000</strong></p>
+                                <p><a href="#" class="btn btn-success" role="button" onclick="addToCart(2000)">Add To Cart</a><a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="assets/img/f65.jpg" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">F-65 </a></h3>
+                                <p>Price : <strong>$700</strong></p>
+                                <p><a href="#" class="btn btn-success" role="button" onclick="addToCart(700)">Add To Cart</a><a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="total-amount">
+                    <h3>Total: $<span id="total">0.00</span></h3>
+                </div>
+                <form action="paypal_payment.php" method="post">
+                    <input type="hidden" name="amount" id="paypal-amount" value="0.00">
+                    <button type="submit" class="btn btn-primary">Pay with PayPal</button>
+                </form>
+                <div id="container"></div>
+                <button id="alipay-button" class="btn btn-primary">Pay with Alipay</button>
+                <button id="stripe-button" class="btn btn-primary">Pay with Stripe</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let totalAmount = 0;
+
+        function addToCart(price) {
+            totalAmount += price;
+            document.getElementById('total').innerText = totalAmount.toFixed(2);
+            document.getElementById('paypal-amount').value = totalAmount.toFixed(2);
+        }
+
+        const paymentsClient = new google.payments.api.PaymentsClient({environment: 'TEST'});
+        const button = paymentsClient.createButton({
+            onClick: onGooglePaymentButtonClicked,
+        });
+        document.getElementById('container').appendChild(button);
+
+        function onGooglePaymentButtonClicked() {
+            const paymentDataRequest = getGooglePaymentDataRequest();
+            paymentsClient.loadPaymentData(paymentDataRequest).then(function(paymentData) {
+                // Handle the response
+                processPayment(paymentData);
+            }).catch(function(err) {
+                // Show error in developer console for debugging
+                console.error(err);
+            });
+        }
+
+        function getGooglePaymentDataRequest() {
+            return {
+                apiVersion: 2,
+                apiVersionMinor: 0,
+                allowedPaymentMethods: [{
+                    type: 'CARD',
+                    parameters: {
+                        allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+                        allowedCardNetworks: ['MASTERCARD', 'VISA']
+                    },
+                    tokenizationSpecification: {
+                        type: 'PAYMENT_GATEWAY',
+                        parameters: {
+                            gateway: 'example',
+                            gatewayMerchantId: 'exampleGatewayMerchantId'
+                        }
+                    }
+                }],
+                merchantInfo: {
+                    merchantId: '01234567890123456789',
+                    merchantName: 'Example Merchant'
+                },
+                transactionInfo: {
+                    totalPriceStatus: 'FINAL',
+                    totalPrice: totalAmount.toFixed(2),
+                    currencyCode: 'USD'
+                }
+            };
+        }
+
+        function processPayment(paymentData) {
+            // Process payment here
+            console.log('Payment successful', paymentData);
+        }
+
+        document.getElementById('alipay-button').addEventListener('click', function() {
+            window.location.href = `alipay_payment.php?amount=${totalAmount.toFixed(2)}`;
+        });
+
+        document.getElementById('stripe-button').addEventListener('click', function() {
+            window.location.href = `stripe_payment.php?amount=${totalAmount.toFixed(2)}`;
+        });
+    </script>
+</body>
+</html>

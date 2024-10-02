@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bootstrap E-Commerce Template</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Fontawesome core CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Slide Show Css -->
+    <link href="assets/ItemSlider/css/main-style.css" rel="stylesheet" />
+    <!-- custom CSS here -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Google Pay API -->
+    <script async src="https://pay.google.com/gp/p/js/pay.js"></script>
+</head>
+<body onload="onGooglePayLoaded()">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><strong>ALICE'S</strong> ELECTRONIC BIKE Shop</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Signup</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><strong>Call: </strong>+61-000-000-000</a></li>
+                            <li><a href="#"><strong>Mail: </strong>info@alicebikeshop.com</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><strong>Address: </strong>
+                                <div>
+                                    Melbourne,<br />
+                                    VIC 3000, AUSTRALIA
+                                </div>
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
+                    </div>
+                      
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="active">Computers</li>
+                    </ol>
+                </div>
+                <!-- /.div -->
+                <div class="row">
+                    <div class="btn-group alg-right-pad">
+                        <button type="button" class="btn btn-default"><strong>1235  </strong>items</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                Sort Products  
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">By Price Low</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Price High</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Popularity</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Reviews</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="assets/img/bronton.jpg" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">Bronton </a></h3>
+                                <p>Price : <strong>$ 3000</strong>  </p>
+                                <p><button class="btn btn-success add-to-cart-btn" data-product-id="1">Add To Cart</button> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="assets/img/dummyimg.jpg" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">E-BMX </a></h3>
+                                <p>Price : <strong>$ 2000</strong>  </p>
+                                <p><button class="btn btn-success add-to-cart-btn" data-product-id="2">Add To Cart</button> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="assets/img/f65.jpg" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">F-65 </a></h3>
+                                <p>Price : <strong>$ 700</strong>  </p>
+                                <p><button class="btn btn-success add-to-cart-btn" data-product-id="3">Add To Cart</button> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Cart Page -->
+    <div class="container" id="cart-section">
+        <h2>Shopping Cart</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+        </table>
+        <div class="text-right">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <button class="btn btn-primary" id="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Payment Options -->
+    <div class="container">
+        <h2>Payment Options</h2>
+        <div class="payment-options">
+            <button class="btn btn-light" onclick="selectPaymentMethod('paypal')">
+                <img src="assets/img/paypal.png" alt="PayPal" style="width: 100px;">
+            </button>
+            <button class="btn btn-light" onclick="selectPaymentMethod('afterpay')">
+                <img src="assets/img/afterpay.png" alt="Afterpay" style="width: 100px;">
+            </button>
+            <button class="btn btn-light" onclick="selectPaymentMethod('stripe')">
+                <img src="assets/img/stripe.png" alt="Stripe" style="width: 100px;">
+            </button>
+        </div>
+        <form id="payment-form">
+            <input type="hidden" id="payment-method" name="payment-method">
+            <button type="submit" class="btn btn-success">Pay Now</button>
+        </form>
+        

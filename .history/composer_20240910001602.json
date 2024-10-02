@@ -1,0 +1,14 @@
+{
+    "require": {
+        "php": "^8.2.12",
+        "paypal/rest-api-sdk-php": "^1.14",
+        "alipaysdk/easysdk": "^1.0",
+        "stripe/stripe-php": "^10.0"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2.12"
+        }
+    }
+}
+

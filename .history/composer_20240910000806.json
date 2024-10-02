@@ -1,0 +1,7 @@
+{
+    "require": {
+        "paypal/rest-api-sdk-php": "^1.14",
+        "alipay/easysdk": "^1.0",
+        "ovo/sdk": "^1.0"
+    }
+}
