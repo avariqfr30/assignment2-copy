@@ -1,5 +1,5 @@
 // Stripe Payment Method
-const stripe = Stripe('INSERT_PUBLIC_KEY');
+const stripe = Stripe('INSERT_KEY');
         
 function renderStripeButton() {
     const button = document.createElement('button');
