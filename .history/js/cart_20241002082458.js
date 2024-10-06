@@ -65,14 +65,12 @@ document.getElementById('continue-to-payment').addEventListener('click', functio
     }
     document.getElementById('cart-section').style.display = 'none';
     document.getElementById('payment-section').style.display = 'block';
-    document.getElementById('products-section').style.display = 'none'; // Hide available products
 });
 
 // Handle "Back" button click
 document.getElementById('back-to-cart').addEventListener('click', function() {
     document.getElementById('payment-section').style.display = 'none';
     document.getElementById('cart-section').style.display = 'block';
-    document.getElementById('products-section').style.display = 'block'; // Show available products
 });
 
 // Handle payment method selection

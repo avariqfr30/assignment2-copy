@@ -162,7 +162,6 @@
         </table>
         <div class="text-right">
             <h3>Total: $<span id="cart-total">0.00</span></h3>
-            <button class="btn btn-primary" id="continue-to-payment">Continue to Payment</button>
         </div>
     </div>
 
@@ -170,9 +169,6 @@
     <div class="container">
         <h2>Payment Options</h2>
         <div class="payment-options">
-            <button class="btn btn-light" onclick="selectPaymentMethod('paypal')">
-                <img src="assets/img/paypal.png" alt="PayPal" style="width: 100px;">
-            </button>
             <button class="btn btn-light" onclick="selectPaymentMethod('stripe')">
                 <img src="assets/img/stripe.png" alt="Stripe" style="width: 100px;">
             </button>
@@ -180,7 +176,6 @@
                 <img src="assets/img/credit-card.png" alt="Credit/Debit Card" style="width: 100px;">
             </button>
         </div>
-        <button class="btn btn-secondary" id="back-to-cart">Back</button>
         <form id="payment-form">
             <input type="hidden" id="payment-method" name="payment-method">
         </form>
