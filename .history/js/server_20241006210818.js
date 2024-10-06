@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const stripe = require('stripe')('INSERT_PUBLIC_KEY');
+const stripe = require('stripe')('INSERT_');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
